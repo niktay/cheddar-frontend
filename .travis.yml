@@ -16,7 +16,7 @@ jobs:
     - stage: test:unit
       script:
         - npm run test:unit -- --coverage
-        - cat ./coverage/lcov.info | coveralls
+        # - cat ./coverage/lcov.info | coveralls
     - stage: test:e2e
       script:
         - npm run test:e2e -- --headless
