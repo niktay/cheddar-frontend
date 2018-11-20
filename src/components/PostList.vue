@@ -30,4 +30,8 @@ export default {
 </script>
 
 <style scoped lang="scss">
+.post-list {
+  grid-column: 2/3;
+  grid-row: 2/2;
+}
 </style>

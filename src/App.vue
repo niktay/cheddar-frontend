@@ -16,21 +16,19 @@
   color: #2c3e50;
 }
 
+body {
+  background-color: #f5f4f2;
+}
+
 @media screen and (min-width: 360px) {
-  #app {
-    margin: auto 1rem;
+  html {
+    font-size: 11pt;
   }
 }
 
 @media screen and (min-width: 1025px) {
-  #app {
-    display: grid;
-    grid-template-columns: 1fr 3fr 1fr;
-    grid-template-rows: 1fr 9fr;
+  html {
+    font-size: 12pt;
   }
-}
-
-body {
-  background-color: #f5f4f2;
 }
 </style>

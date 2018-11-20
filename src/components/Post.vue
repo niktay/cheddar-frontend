@@ -18,7 +18,7 @@ export default {
 h2 {
   font-family: "Merriweather", serif;
   font-weight: 900;
-  font-size: 2.5rem;
+  font-size: 2rem;
   color: #111111;
   margin-bottom: 7px;
 }
