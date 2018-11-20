@@ -1,0 +1,22 @@
+language: node_js
+node_js:
+  - "node"
+install:
+  - if [[ `npm -v` != 5.7* ]]; then npm install -g npm@'>=5.7.1'; fi
+  - npm ci
+stages:
+  - lint
+  - test:unit
+  - test:e2e
+jobs:
+  include:
+    - stage: lint
+      script:
+        - npm run lint
+    - stage: test:unit
+      script:
+        - npm run test:unit -- --coverage
+        # - cat ./coverage/lcov.info | coveralls
+    - stage: test:e2e
+      script:
+        - npm run test:e2e -- --headless
