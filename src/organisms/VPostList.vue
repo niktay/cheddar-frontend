@@ -1,26 +1,26 @@
 <template>
-  <div class="post-list">
+  <div class="o-VPostList">
     <h4 v-if="loading">Loading...</h4>
-    <post v-for="post in allPosts" :key="post.id" :post="post">
-    </post>
+    <VPost v-for="post in allPosts" :key="post.id" :post="post" />
   </div>
 </template>
 
 <script>
 import { ALL_POSTS_QUERY } from "../constants/graphql";
-import Post from "./Post";
+import VPost from "@/molecules/VPost";
 
 export default {
-  name: "PostList",
   data() {
     return {
       allPosts: [],
       loading: 0
     };
   },
+
   components: {
-    Post
+    VPost
   },
+
   apollo: {
     allPosts: {
       query: ALL_POSTS_QUERY
@@ -30,8 +30,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-.post-list {
+.o-VPostList {
   grid-column: 2/3;
-  grid-row: 2/2;
 }
 </style>

@@ -1,18 +1,16 @@
 <template>
-  <div class="navbar">
+  <div class="o-VNavbar">
       <img id="cheddar-logo" src="@/assets/logo.svg" alt="Cheddar Logo">
       <a href="#" class="login-button"><i class="fas fa-user-circle"></i></a>
   </div>
 </template>
 
 <script>
-export default {
-  name: "Navbar"
-};
+export default {};
 </script>
 
 <style scoped lang="scss">
-.navbar {
+.o-VNavbar {
   grid-column: 2/3;
   grid-row: 1/1;
   margin-top: 2rem;
