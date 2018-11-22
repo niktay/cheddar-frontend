@@ -1,9 +1,9 @@
 <template>
-  <div class="m-VPostItem">
+  <article class="m-VPostItem">
     <VPostTitle>{{ post.title }}</VPostTitle>
     <VPostAuthor :author="post.author" />
     <VPostContent>{{ post.content }}</VPostContent>
-  </div>
+  </article>
 </template>
 
 <script>
