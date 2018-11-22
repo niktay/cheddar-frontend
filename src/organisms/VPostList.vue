@@ -1,13 +1,13 @@
 <template>
   <div class="o-VPostList">
     <h4 v-if="loading">Loading...</h4>
-    <VPost v-for="post in allPosts" :key="post.id" :post="post" />
+    <VPostItem v-for="post in allPosts" :key="post.id" :post="post" />
   </div>
 </template>
 
 <script>
 import { ALL_POSTS_QUERY } from "../constants/graphql";
-import VPost from "@/molecules/VPost";
+import VPostItem from "@/molecules/VPostItem";
 
 export default {
   data() {
@@ -18,7 +18,7 @@ export default {
   },
 
   components: {
-    VPost
+    VPostItem
   },
 
   apollo: {

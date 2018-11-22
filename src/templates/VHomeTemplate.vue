@@ -20,13 +20,13 @@ export default {
 
 <style lang="scss">
 @media screen and (min-width: 360px) {
-  .o-vHomeTemplate {
+  .o-VHomeTemplate {
     margin: auto 1rem;
   }
 }
 
 @media screen and (min-width: 1025px) {
-  .o-vHomeTemplate {
+  .o-VHomeTemplate {
     display: grid;
     grid-template-columns: 1fr 3fr 1fr;
   }
