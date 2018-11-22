@@ -1,5 +1,5 @@
 <template>
-    <div class="home-content">
+    <div class="o-v-home-template">
       <Navbar />
       <PostList />
     </div>
@@ -11,7 +11,6 @@ import PostList from "@/components/PostList.vue";
 import Navbar from "@/components/Navbar.vue";
 
 export default {
-  name: "home",
   components: {
     Navbar,
     PostList
@@ -21,13 +20,13 @@ export default {
 
 <style lang="scss">
 @media screen and (min-width: 360px) {
-  .home-content {
+  .o-v-home-template {
     margin: auto 1rem;
   }
 }
 
 @media screen and (min-width: 1025px) {
-  .home-content {
+  .o-v-home-template {
     display: grid;
     grid-template-columns: 1fr 3fr 1fr;
   }
