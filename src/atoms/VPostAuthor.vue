@@ -8,7 +8,7 @@
 export default {
   computed: {
     byAuthor: function() {
-      return "BY " + this.author.username;
+      return `by ${this.author.firstName} ${this.author.lastName}`;
     }
   },
 
