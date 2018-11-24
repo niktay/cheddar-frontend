@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`VPostAuthor renders correctly setting the \`author\` prop 1`] = `
+<span class="a-VPostAuthor">
+  by John Doe
+</span>
+`;
+
+exports[`VPostAuthor renders undefined author when no \`author\` prop 1`] = `
+<span class="a-VPostAuthor">
+  by undefined undefined
+</span>
+`;
+
+exports[`VPostAuthor renders undefined for missing \`author\` prop properties 1`] = `
+<span class="a-VPostAuthor">
+  by undefined undefined
+</span>
+`;

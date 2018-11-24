@@ -20,6 +20,10 @@ export default {
         return (
           value.hasOwnProperty("firstName") && value.hasOwnProperty("lastName")
         );
+      },
+      default: {
+        firstName: "undefined",
+        lastName: "undefined"
       }
     }
   }
