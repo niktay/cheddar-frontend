@@ -1,12 +1,11 @@
 <template>
     <div class="o-VHomeTemplate">
       <VNavbar />
-      <VPostList />
+      <VPostList :posts="posts"/>
     </div>
 </template>
 
 <script>
-// @ is an alias to /src
 import VPostList from "@/organisms/VPostList.vue";
 import VNavbar from "@/organisms/VNavbar.vue";
 
@@ -14,6 +13,13 @@ export default {
   components: {
     VNavbar,
     VPostList
+  },
+
+  props: {
+    posts: {
+      type: Array,
+      required: true
+    }
   }
 };
 </script>

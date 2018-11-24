@@ -18,7 +18,12 @@ export default {
     VPostContent
   },
 
-  props: ["post"]
+  props: {
+    post: {
+      type: Object,
+      required: true
+    }
+  }
 };
 </script>
 

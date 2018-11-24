@@ -15,7 +15,12 @@ export default {
   props: {
     author: {
       type: Object,
-      required: true
+      required: true,
+      validator: function(value) {
+        return (
+          value.hasOwnProperty("firstName") && value.hasOwnProperty("lastName")
+        );
+      }
     }
   }
 };
