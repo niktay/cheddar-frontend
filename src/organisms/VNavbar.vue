@@ -1,12 +1,18 @@
 <template>
   <div class="o-VNavbar">
-      <img id="cheddar-logo" src="@/assets/logo.svg" alt="Cheddar Logo">
+      <VLogo />
       <a href="#" class="login-button"><i class="fas fa-user-circle"></i></a>
   </div>
 </template>
 
 <script>
-export default {};
+import VLogo from "@/atoms/VLogo";
+
+export default {
+  components: {
+    VLogo
+  }
+};
 </script>
 
 <style scoped lang="scss">
@@ -15,9 +21,7 @@ export default {};
   grid-row: 1/1;
   margin-top: 2rem;
   padding-bottom: 0.5rem;
-  #cheddar-logo {
-    max-height: 2.2rem;
-  }
+
   .login-button {
     font-size: 2rem;
     float: right;
