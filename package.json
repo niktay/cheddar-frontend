@@ -6,6 +6,8 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
+    "build:storybook": "vue-cli-service build:storybook -c private/storybook && node ./build-scripts/fix-static-storybook.js",
+    "serve:storybook": "vue-cli-service serve:storybook -p 8001 -c private/storybook -s ./src,./src/assets",
     "test:e2e": "vue-cli-service test:e2e",
     "test:unit": "vue-cli-service test:unit"
   },
@@ -22,6 +24,9 @@
     "vuex": "^3.0.1"
   },
   "devDependencies": {
+    "@storybook/addon-actions": "4.0.0-alpha.20",
+    "@storybook/addon-options": "4.0.0-alpha.20",
+    "@storybook/vue": "4.0.0-alpha.20",
     "@vue/cli-plugin-babel": "^3.1.1",
     "@vue/cli-plugin-e2e-cypress": "^3.1.2",
     "@vue/cli-plugin-eslint": "^3.1.5",
@@ -32,23 +37,32 @@
     "babel-core": "7.0.0-bridge.0",
     "babel-eslint": "^10.0.1",
     "babel-jest": "^23.6.0",
+    "babel-polyfill": "^6.26.0",
     "coveralls": "^3.0.2",
     "eslint": "^5.8.0",
     "eslint-plugin-vue": "^5.0.0-0",
+    "jest-image-snapshot": "^2.5.0",
     "node-sass": "^4.9.0",
+    "puppeteer": "^1.9.0",
     "sass-loader": "^7.0.1",
+    "storybook-addon-vue-info": "^0.6.1",
+    "storybook-vue-router": "^1.0.1",
+    "vue-cli-plugin-atomic-design": "^0.2.12",
     "vue-template-compiler": "^2.5.17"
   },
   "eslintConfig": {
     "root": true,
     "env": {
-      "node": true
+      "node": true,
+      "jest": true
     },
     "extends": [
       "plugin:vue/essential",
       "@vue/prettier"
     ],
-    "rules": {},
+    "rules": {
+      "import/no-extraneous-dependencies": "error"
+    },
     "parserOptions": {
       "parser": "babel-eslint"
     }
@@ -73,17 +87,27 @@
     "transform": {
       "^.+\\.vue$": "vue-jest",
       ".+\\.(css|styl|less|sass|scss|svg|png|jpg|ttf|woff|woff2)$": "jest-transform-stub",
-      "^.+\\.jsx?$": "babel-jest"
+      "^.+\\.jsx?$": "babel-jest",
+      "^.+\\.svg$": "<rootDir>/private/jest/svgMock.js"
     },
     "moduleNameMapper": {
-      "^@/(.*)$": "<rootDir>/src/$1"
+      "^@/(.*)$": "<rootDir>/src/$1",
+      "^atoms(.*)$": "<rootDir>/src/components/atoms$1",
+      "^molecules(.*)$": "<rootDir>/src/components/molecules$1",
+      "^organism(.*)$": "<rootDir>/src/components/organism$1",
+      "^templates(.*)$": "<rootDir>/src/components/templates$1",
+      "^pages(.*)$": "<rootDir>/src/components/pages$1"
     },
     "snapshotSerializers": [
       "jest-serializer-vue"
     ],
     "testMatch": [
-      "**/tests/unit/**/*.spec.(js|jsx|ts|tsx)|**/__tests__/*.(js|jsx|ts|tsx)"
+      "**/tests/unit/**/*.spec.(js|jsx|ts|tsx)|**/__tests__/*.(js|jsx|ts|tsx)",
+      "**/src/**/*.test.(js|jsx|ts|tsx)|**/__tests__/*.(js|jsx|ts|tsx)"
     ],
-    "testURL": "http://localhost/"
+    "testURL": "http://localhost/",
+    "globals": {
+      "PATH": "http://localhost:8080"
+    }
   }
 }

@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`VPostContent component should render correctly 1`] = `<p class="a-VPostContent">The quick brown fox jumps over the lazy dog</p>`;
