@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`VLogo component should render correctly 1`] = `<img src="../../../assets/logo.svg" alt="Cheddar Logo" class="a-VLogo">`;

@@ -8,7 +8,8 @@ export const ALL_POSTS_QUERY = gql`
       content
       createdAt
       author {
-        username
+        firstName
+        lastName
       }
     }
   }

@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`VNavbar component should render correctly 1`] = `<nav class="o-VNavbar"><img src="../../../assets/logo.svg" alt="Cheddar Logo" class="a-VLogo"> <a href="#" class="login-button"><i class="fas fa-user-circle"></i></a></nav>`;

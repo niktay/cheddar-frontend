@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`VPostItem component should render correctly 1`] = `
+<div class="o-VPostList">
+  <article class="m-VPostItem">
+    <h2 class="a-VPostTitle">First Sample Title</h2> <span class="a-VPostAuthor">
+  by John Doe
+</span>
+    <p class="a-VPostContent">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate mollitia quaerat voluptatem
+      optio obcaecati quos ex saepe. Minus, optio quis! Labore fugit deleniti ex id commodi ab nobis eaque
+      adipisci?</p>
+  </article>
+  <article class="m-VPostItem">
+    <h2 class="a-VPostTitle">Second Sample Title</h2> <span class="a-VPostAuthor">
+  by Jane Doe
+</span>
+    <p class="a-VPostContent">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate mollitia quaerat voluptatem
+      optio obcaecati quos ex saepe. Minus, optio quis! Labore fugit deleniti ex id commodi ab nobis eaque
+      adipisci?</p>
+  </article>
+</div>
+`;
